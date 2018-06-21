@@ -14,5 +14,89 @@
 }
 
 body {
-	background-color: #000!important;
+  background-color: #000!important;
+  background: radial-gradient(#555, black)!important;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  a {
+    width: 30%;
+    color: #000;
+
+    .card-text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; 
+    }
+  }
+
+  a:hover {
+    color: #444;
+    text-decoration: none;
+    -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
+    img {
+      filter: blur(1px);
+    }
+    .see-detail {
+      display: block;
+    }
+  }
+
+  .see-detail {
+    display: none;
+  }
+
+  .info {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+  }
+
+  h5 {
+    margin-bottom: 0;
+  }
+
+  .centered {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nav {
+  margin-top: 40px;
+  margin-bottom: 40px!important;
+}
+
+.nav-item {
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #777;
+  }
+  .active {
+    color: #c30909;
+  }
+}
+
+.prices {
+  .card {
+    text-align: center;
+    .card-text {
+      color: #c30909;
+    }
+  }
+}
+
+.movie {
+  table {
+    margin-top: 20px;
+    text-align: center;
+  }
 }

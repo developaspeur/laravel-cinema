@@ -27,7 +27,7 @@ Route::get('/movies', function () {
 });
 
 // Description d'un film
-Route::get('/movies/{id}', function () {
+Route::get('/movies/{id}', function ($id) {
     return view('movie');
 });
 

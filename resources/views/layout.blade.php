@@ -14,7 +14,24 @@
     
     </head>
     <body>
-        @yield('content')
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === '/' ? 'active' : ''}}" href="/">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'movies' ? 'active' : ''}}" href="/movies">Films à l'affiche</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'prices' ? 'active' : ''}}" href="/prices">Tarifs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'about' ? 'active' : ''}}" href="/about">Informations pratiques</a>
+            </li>
+        </ul>
+        
+        <div class="container ">
+            @yield('content')
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
