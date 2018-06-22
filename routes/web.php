@@ -21,15 +21,8 @@ Route::get('/about', 'AboutController@index');
 Route::get('/movies', 'MoviesController@index');
 
 // Description d'un film
-<<<<<<< HEAD
-Route::get('/movies/{id}', 'MoviesController@show');
 
-// Tarifs du cinéma
-Route::get('/prices', 'PricesController@index');
-=======
-Route::get('/movies/{id}', function ($id) {
-    return view('movie');
-});
+Route::get('/movies/{id}', 'MoviesController@show');
 
 // Tarifs du cinéma
 Route::get('/prices', function () {
@@ -43,5 +36,10 @@ Route::post('/register', 'RegisterController@store');
 // Login
 Route::get('/login', 'SessionController@createSession');
 Route::post('/login', 'SessionController@store');
-Route::get('/logout', 'SessionController@destroy');
->>>>>>> 5ab486ff4bade92464afc7844956221fd1dd268b
+
+//Admin
+Route::middleware('auth')->group(function() {
+    Route::get('/logout', 'SessionController@destroy');
+    Route::get('/createFilm', 'FilmController@index');
+    Route::post('/createFilm', 'FilmController@create');
+});

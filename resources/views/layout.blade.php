@@ -29,6 +29,9 @@
             </li>
             @if(auth()->check())
             <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'createFilm' ? 'active' : ''}}" href="/createFilm">Ajouter un film</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{Request::path() === 'register' ? 'active' : ''}}" href=#>Bonjour {{ auth()->user()->name }} </a>
             </li>
             <li class="nav-item">
