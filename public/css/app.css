@@ -10419,5 +10419,116 @@ a.text-dark:focus {
 
 body {
   background-color: #000 !important;
+  background: radial-gradient(#555, black) !important;
+  min-height: 100vh;
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.movies a {
+  width: 30%;
+  color: #000;
+}
+
+.movies a .card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.movies a:hover {
+  color: #444;
+  text-decoration: none;
+  -webkit-filter: grayscale(70%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(70%);
+}
+
+.movies a:hover img {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.movies a:hover .see-detail {
+  display: block;
+}
+
+.movies .see-detail {
+  display: none;
+}
+
+.movies .info {
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+
+.movies h5 {
+  margin-bottom: 0;
+}
+
+.movies .centered {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav {
+  margin-top: 40px;
+  margin-bottom: 40px !important;
+}
+
+.nav-item a {
+  color: #fff;
+}
+
+.nav-item a:hover {
+  color: #777;
+}
+
+.nav-item .active {
+  color: #c30909;
+}
+
+.prices .card {
+  text-align: center;
+}
+
+.prices .card .card-text {
+  color: #c30909;
+}
+
+.movie table {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-inner {
+  height: 400px;
+}
+
+.carousel-caption {
+  bottom: inherit;
+  top: 0px;
+}
+
+.blur {
+  height: 100px;
+  width: 73%;
+  position: absolute;
+  background-color: #222;
+  z-index: 100;
+  opacity: 0.5;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 

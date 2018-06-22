@@ -21,7 +21,27 @@ Route::get('/about', 'AboutController@index');
 Route::get('/movies', 'MoviesController@index');
 
 // Description d'un film
+<<<<<<< HEAD
 Route::get('/movies/{id}', 'MoviesController@show');
 
 // Tarifs du cinéma
 Route::get('/prices', 'PricesController@index');
+=======
+Route::get('/movies/{id}', function ($id) {
+    return view('movie');
+});
+
+// Tarifs du cinéma
+Route::get('/prices', function () {
+    return view('prices');
+});
+
+// Register
+Route::get('/register', 'RegisterController@createForm');
+Route::post('/register', 'RegisterController@store');
+
+// Login
+Route::get('/login', 'SessionController@createSession');
+Route::post('/login', 'SessionController@store');
+Route::get('/logout', 'SessionController@destroy');
+>>>>>>> 5ab486ff4bade92464afc7844956221fd1dd268b
