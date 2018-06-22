@@ -14,8 +14,8 @@
 }
 
 body {
-  background-color: #000!important;
-  background: radial-gradient(#555, black)!important;
+  background-color: #555!important;
+  // background: radial-gradient(#555, black)!important;
   min-height: 100vh;
 }
 
@@ -111,13 +111,39 @@ body {
   top: 0px;  
 }
 
-.blur {
-  height: 100px;
-  width: 73%;
-  position: absolute;
-  // filter: grayscale(100%);
-  background-color: #222;
-  z-index: 100;
-  opacity: 0.5;
-  filter: blur(4px);
+// .blur {
+//   height: 100px;
+//   width: 73%;
+//   position: absolute;
+//   // filter: grayscale(100%);
+//   background-color: #222;
+//   z-index: 100;
+//   opacity: 0.5;
+//   filter: blur(4px);
+// }
+
+.h1, .h3, .h4, .h6, h1, h3, h4, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: white!important;
+}
+
+.h2, h2 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #d35400!important;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: white!important;
+}
+
+.nav-item .active {
+  color: #d35400!important;
 }
