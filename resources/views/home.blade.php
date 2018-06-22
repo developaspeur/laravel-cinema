@@ -12,7 +12,7 @@
         <img class="d-block w-100" src="{{URL::asset('img/img2.jpg')}}" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
             <div class="text"><h2>Titre 1</h2></div>
-            <p>Procahine séance à 14h30</p>
+            <p>Prochaine séance à 14h30</p>
         </div>
     </div>
     @for ($i = 3; $i <= 4; $i++)
