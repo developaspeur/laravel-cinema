@@ -35,3 +35,12 @@ Route::get('/movies/{id}', function ($id) {
 Route::get('/prices', function () {
     return view('prices');
 });
+
+// Register
+Route::get('/register', 'RegisterController@createForm');
+Route::post('/register', 'RegisterController@store');
+
+// Login
+Route::get('/login', 'SessionController@createSession');
+Route::post('/login', 'SessionController@store');
+Route::get('/logout', 'SessionController@destroy');

@@ -27,6 +27,21 @@
             <li class="nav-item">
                 <a class="nav-link {{Request::path() === 'about' ? 'active' : ''}}" href="/about">Informations pratiques</a>
             </li>
+            @if(auth()->check())
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'register' ? 'active' : ''}}" href=#>Bonjour {{ auth()->user()->name }} </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'logout' ? 'active' : ''}}" href=/logout>Déconnexion </a>
+            </li>
+            @else
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'register' ? 'active' : ''}}" href="/register">Inscription </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{Request::path() === 'login' ? 'active' : ''}}" href="/login">Connexion </a>
+            </li>
+            @endif
         </ul>
         
         <div class="container ">
