@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+<div class="blur"></div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -8,11 +9,19 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img class="d-block w-100" src="{{URL::asset('img/img2.jpg')}}" alt="First slide">
+        <img class="d-block w-100" src="{{URL::asset('img/img2.jpg')}}" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="text"><h2>Titre 1</h2></div>
+            <p>Procahine séance à 14h30</p>
+        </div>
     </div>
     @for ($i = 3; $i <= 4; $i++)
     <div class="carousel-item">
-        <img class="d-block w-100" src="{{URL::asset('img/img'.$i.'.jpg')}}" alt="Second slide">
+      <img class="d-block w-100" src="{{URL::asset('img/img'.$i.'.jpg')}}" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+          <h2>Titre {{$i}}</h2>
+          <p>Prochaine séance à 16h30</p>
+      </div>
     </div>
     @endfor
     

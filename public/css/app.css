@@ -10420,6 +10420,7 @@ a.text-dark:focus {
 body {
   background-color: #000 !important;
   background: radial-gradient(#555, black) !important;
+  min-height: 100vh;
 }
 
 .movies {
@@ -10509,5 +10510,25 @@ body {
 .movie table {
   margin-top: 20px;
   text-align: center;
+}
+
+.carousel-inner {
+  height: 400px;
+}
+
+.carousel-caption {
+  bottom: inherit;
+  top: 0px;
+}
+
+.blur {
+  height: 100px;
+  width: 73%;
+  position: absolute;
+  background-color: #222;
+  z-index: 100;
+  opacity: 0.5;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 
