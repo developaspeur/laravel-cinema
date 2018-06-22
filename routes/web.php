@@ -12,26 +12,16 @@
 */
 
 // Accueil
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 // A propos
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'AboutController@index');
 
 // Liste des films
-Route::get('/movies', function () {
-    return view('movies');
-});
+Route::get('/movies', 'MoviesController@index');
 
 // Description d'un film
-Route::get('/movies/{id}', function () {
-    return view('movie');
-});
+Route::get('/movies/{id}', 'MoviesController@show');
 
 // Tarifs du cinéma
-Route::get('/prices', function () {
-    return view('prices');
-});
+Route::get('/prices', 'PricesController@index');

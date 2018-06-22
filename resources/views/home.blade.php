@@ -13,7 +13,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel
+            {{$title}}
         </div>
 
         <div class="links">
